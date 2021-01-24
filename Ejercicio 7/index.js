@@ -1,4 +1,4 @@
-var resultado=checkNumber(numero)
+var resultado=checkNumber(numero);
 
 function checkNumber(numero){
     if (numero%2==0 ) {
