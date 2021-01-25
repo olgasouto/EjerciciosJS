@@ -2,8 +2,6 @@ const letrasDNI= ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N
 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
 console.log(letrasDNI);
 
-var numDNI=32831438
-console.log(numDNI)
 const letraDNI='L'
 console.log(letraDNI)
 const divisor=23

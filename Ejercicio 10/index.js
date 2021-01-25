@@ -4,6 +4,6 @@ console.log('Lista inicial',numbers)
 
 const parNumber=numbers.filter(number => number%2==0);
 console.log('Lista de pares',parNumber);
-const imparNumber=numbers.filter(number => number%2==!0);
+const imparNumber=numbers.filter(number => number%2==!!0);
 console.log('Lista de impares',imparNumber);
 
