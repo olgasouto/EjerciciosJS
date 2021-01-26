@@ -1,5 +1,6 @@
 class Cuadrado {
   constructor(lado) {
+    this.lado=lado
     this.perimetro=lado*4;
     this.area=lado*lado;
     console.log('El cuadrado calculado tiene', +(lado), 'cm de lado', 'perímetro' +(this.perimetro), 'cm y área', +(this.area), 'cm2');
