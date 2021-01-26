@@ -1,18 +1,18 @@
 class Factura {
-    constructor (cliente, elemento) {
+    constructor (cliente, elementos) {
         this.cliente= cliente;
-        this.elemento= elemento;
+        this.elementos= elementos;
         this.informacion= {
-            baseImponible: 0,
-            iva: 21,
-            total: 0,
-            formaPago:  "En metálico"
+          baseImponible: 0,
+          iva: 21,
+          total: 0,
+          formaPago:  "En metálico"
         }
 
-        this.calculoTotal=function() {
-          for (var i=0; i< this.elemento.lenght; i++) {
-            this.informacion.baseImponible += this.elemento[i].cantidad * this.elemento[i].precio;
-          }
+        this.calculoTotal = function() {
+          for (var i = 0; i< this.elementos.lenght; i++) {
+            this.informacion.baseImponible += this.elementos[i].cantidad * this.elementos[i].precio;
+          } 
           this.informacion.total= this.informacion.baseImponible * (1+(this.informacion.iva/100));
         }
 
@@ -23,7 +23,7 @@ class Factura {
     }
 }
 
-class cliente {
+class Cliente {
     constructor(nombre, direccion, telefono, nif){
         this.nombre= nombre;
         this.direccion= direccion;
@@ -32,7 +32,7 @@ class cliente {
     }  
 }
 
-class elemento {
+class Elemento {
     constructor (descripcion, cantidad, precio){
         this.descripcion=descripcion;
         this.cantidad=cantidad;
@@ -40,10 +40,10 @@ class elemento {
     }
 }
 
-const primercliente=new cliente('Pepe','Coruña','981200520','334554298');
-const arrayelementos=[new elemento ("botellas",5,10),new elemento ("latas",6,2)];
-const primerafactura=new Factura(primercliente,arrayelementos);
-primerafactura.mostrarTotal();
+const primerCliente=new Cliente('Pepe','Coruña','981200520','334554298');
+const arrayElementos=[new Elemento ("botellas",5,10),new Elemento ("latas",6,2)];
+const primeraFactura=new Factura(primerCliente,arrayElementos);
+primeraFactura.mostrarTotal();
 
 
  
