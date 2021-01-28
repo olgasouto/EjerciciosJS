@@ -10,7 +10,7 @@ class Factura {
         }
 
         this.calculoTotal = function() {
-          for (var i = 0; i< this.elementos.lenght; i++) {
+          for (var i = 0; i< this.elementos.length; i++) {
             this.informacion.baseImponible += this.elementos[i].cantidad * this.elementos[i].precio;
           } 
           this.informacion.total= this.informacion.baseImponible * (1+(this.informacion.iva/100));
